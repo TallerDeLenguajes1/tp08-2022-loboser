@@ -50,15 +50,4 @@ namespace tp8
             File.WriteAllLines("index.csv", lineas);
         }
     }
-
-    class Archivos
-    {
-        int numeroDeRegistro;
-        string nombre = "";
-        string extension = "";
-
-        public int NumeroDeRegistro{get => numeroDeRegistro; set => numeroDeRegistro = value; }
-        public string Nombre{get => nombre; set => nombre = value; }
-        public string Extension{get => extension; set => extension = value; }
-    }
 }
