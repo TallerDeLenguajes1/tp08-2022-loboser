@@ -7,7 +7,10 @@ namespace tp8
     {
         public static void Main(string[] args)
         {   
-            string path = "";
+            string path;
+            int numeroDeRegistro;
+            string nombre;
+            string extension;
 
             do
             {
@@ -25,20 +28,27 @@ namespace tp8
             string[] directorio = Directory.GetFiles(path);
             string[] separado;
 
-            var Archivo = new Archivos();
-            var listaDeArchivos = new List<Archivos>();
+            var lineas = new List<string>();
+            string linea;
             int id = 0;
 
             foreach (var archivo in directorio)
             {
                 separado = archivo.Split('\\','.');
-                Archivo.NumeroDeRegistro = id;
-                Archivo.Nombre = separado[5];
-                Archivo.Extension = separado[6];
-                Console.WriteLine((id+1) + ") " + separado[5] + "." + separado[6]);
+
+                numeroDeRegistro = id;
+                nombre = separado[5];
+                extension = separado[6];
+
+                linea = numeroDeRegistro + "," + nombre + "," + extension;
+                lineas.Add(linea);
+
+                Console.WriteLine((numeroDeRegistro+1) + ") " + nombre + "." + extension);
                 id++;
-                listaDeArchivos.Add(Archivo);
             }
+
+            path = "index.csv";
+            File.WriteAllLines(path, lineas);
         }
     }
 
