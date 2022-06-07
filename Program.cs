@@ -25,14 +25,14 @@ namespace tp8
                 }
             } while (!Directory.Exists(path));
 
-            string[] directorio = Directory.GetFiles(path);
+            string[] archivos = Directory.GetFiles(path);
             string[] separado;
 
             var lineas = new List<string>();
             string linea;
             int id = 0;
 
-            foreach (var archivo in directorio)
+            foreach (var archivo in archivos)
             {
                 separado = archivo.Split('\\','.');
 
