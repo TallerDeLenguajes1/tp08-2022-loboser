@@ -47,8 +47,7 @@ namespace tp8
                 id++;
             }
 
-            path = "index.csv";
-            File.WriteAllLines(path, lineas);
+            File.WriteAllLines("index.csv", lineas);
         }
     }
 
