@@ -23,8 +23,10 @@ namespace tp8
             } while (!Directory.Exists(path));
 
             string[] directorio = Directory.GetFiles(path);
-            var Archivo = new Archivos();
             string[] separado;
+
+            var Archivo = new Archivos();
+            var listaDeArchivos = new List<Archivos>();
             int id = 0;
 
             foreach (var archivo in directorio)
@@ -35,6 +37,7 @@ namespace tp8
                 Archivo.Extension = separado[6];
                 Console.WriteLine((id+1) + ") " + separado[5] + "." + separado[6]);
                 id++;
+                listaDeArchivos.Add(Archivo);
             }
         }
     }
