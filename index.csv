@@ -1,5 +1,5 @@
-0;;gitignore
-1;index;csv
-2;Program;cs
-3;README;md
-4;tp08-2022-loboser;csproj
+0,,gitignore
+1,index,csv
+2,Program,cs
+3,README,md
+4,tp08-2022-loboser,csproj

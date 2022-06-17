@@ -37,8 +37,8 @@ namespace tp8
                 separado = archivo.Split('\\','.');
 
                 numeroDeRegistro = id;
-                nombre = separado[5];
-                extension = separado[6];
+                nombre = separado[separado.Length-2];
+                extension = separado[separado.Length-1];
 
                 linea = numeroDeRegistro + "," + nombre + "," + extension;
                 lineas.Add(linea);
